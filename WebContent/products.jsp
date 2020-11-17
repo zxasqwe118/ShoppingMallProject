@@ -1,7 +1,7 @@
 <%@ page contentType = "text/html; charset=utf-8" %>
 <%@ page import = "java.util.ArrayList" %>
 <%@ page import = "dto.Product" %>
-<jsp:useBean id = productDAO" class = "dao.ProductRepository" scope = "session" />
+<jsp:useBean id = "productDAO" class = "dao.ProductRepository" scope = "session" />
 <html>
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">

@@ -1,7 +1,7 @@
 <%@ page contentType = "text/html; charset=utf-8" %>
 <%@ page import = "java.util.ArrayList" %>
 <%@ page import = "dto.Product" %>
-<jsp:useBean id = "productDAO" class = "dao.ProductRepository" scope = "session" />
+<%@ page import = "dao.ProductRepository" %>
 <html>
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -11,11 +11,12 @@
 	<jsp:include page = "menu.jsp" />
 	<div class = "jumbotron">
 		<div class = "container">
-			<h1 class = "display-3">상품목록</h1>
+			<h1 class = "display-3" align = "center">상품목록</h1>
 		</div>
 	</div>
 	<%
-		ArrayList<Product> listOfProducts = productDAO.getAllProducts();
+		ProductRepository dao = ProductRepository.getInstance();
+		ArrayList<Product> listOfProducts = dao.getAllProducts();
 	%>
 	<div class = "container">
 		<div class = "row" align = "center">

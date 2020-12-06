@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8"%>
 <html>
 <head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <title>상품 등록</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
 		</div>
 	</div>
 	<div class = "container">
-		<form name = "newProduct" action = "./processAddProduct.jsp" class = "form-horizontal" method = "post">
+		<form name = "newProduct" action = "./processAddProduct.jsp" class = "form-horizontal" method = "post" enctype = "multipart/form-data">
 			<div class = "form-group row">
 				<label class = "col-sm-2">상품 코드</label>
 				<div class = "col-sm-3">
@@ -61,6 +61,12 @@
 					<input type = "radio" name = "condition" value = "New"> 신규 제품
 					<input type = "radio" name = "condition" value = "Old"> 중고 제품
 					<input type = "radio" name = "condition" value = "Refurbished"> 리퍼 제품
+				</div>
+			</div>
+			<div class = "form-group row">
+				<label class = "col-sm-2">이미지</label>
+				<div class = "col-sm-5">
+					<input type = "file" name = "productImage" class = "form-control">
 				</div>
 			</div>
 			<div class = "form-group row">
